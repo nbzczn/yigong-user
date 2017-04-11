@@ -6,6 +6,9 @@ import FastClick from 'fastclick'
 import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
+import {ToastPlugin} from 'vux'
+Vue.use(ToastPlugin)
+
 import routes from './routes'
 import store from './store'
 
@@ -14,8 +17,9 @@ const router = new VueRouter({
 })
 
 router.beforeEach(({meta, path}, from, next) => {
+  console.log(store.state.user)
   var {auth = true} = meta
-  var isLogin = Boolean(store.state.user.id) // true用户已登录， false用户未登录
+  var isLogin = Boolean(store.state.user.access_token) // true用户已登录， false用户未登录
 
   if (auth && !isLogin && (path !== '/login' && path !== '/register')) {
     return next({path: '/login'})

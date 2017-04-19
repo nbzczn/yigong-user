@@ -12,6 +12,9 @@ Vue.use(ToastPlugin)
 import routes from './routes'
 import store from './store'
 
+import 'normalize.css/normalize.css'
+import 'animate.css/animate.css'
+
 const router = new VueRouter({
   routes
 })

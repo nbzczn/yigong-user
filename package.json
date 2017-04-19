@@ -10,9 +10,11 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
     "axios": "^0.16.1",
     "fastclick": "^1.0.6",
     "ionicons": "^3.0.0",
+    "normalize.css": "^6.0.0",
     "query-string": "^4.3.2",
     "vue": "^2.2.2",
     "vue-router": "^2.2.0",

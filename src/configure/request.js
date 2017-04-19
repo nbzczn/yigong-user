@@ -8,8 +8,18 @@ const Request = {
       return axios.get(url)
     }
   },
-  post (url, params) {
+  post (url, params, config) {
     return axios.post(url, params, {
+      ...config,
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
+  },
+  put (url, params, config) {
+    return axios.post(url, params, {
+      ...config,
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'

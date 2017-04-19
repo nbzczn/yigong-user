@@ -152,7 +152,8 @@
           })
           this.disabled = true
           this.run()
-        }).catch(() => {
+        }).catch((err) => {
+          console.log(err)
           this.$vux.toast.show({
             type: 'text',
             text: '验证码发送失败',
